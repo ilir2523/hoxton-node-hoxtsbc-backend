@@ -13,9 +13,10 @@ datasource db {
 model User {
   id              Int           @id @default(autoincrement())
   email           String        @unique
+  password        String        
   fullName        String
   amountInAccount Int
-  transactions     Transaction[]
+  transactions    Transaction[]
 }
 
 model Transaction {
